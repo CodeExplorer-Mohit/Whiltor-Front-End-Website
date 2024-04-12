@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+		integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link href="images/icon.png" rel="icon">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="nav-res.css">
+
+	<style>
+		ul {
+			transition-property: all;
+			transition-duration: .8s;
+			transition-timing-function: ease-in-out;
+			left: -100%;
+		}
+
+		#check:checked~ul {
+			left: -10%;
+		}
+
+		#check:checked~ul li {
+			margin-left: 30px;
+		}
+	</style>
+
+</head>
+
+<body class="bg-[#ecf2fb] overflow-x-hidden" oncontextmenu="return false">
+
+	<!--navbar-->
+	<nav class="flex justify-center items-center">
+		<div class="flex justify-between items-center w-[95%] h-[10vh] md:h-[15vh]">
+
+			<!--logo-->
+			<div class=" bg-[] flex justify-center items-center">
+				<img class="w-[100px] md:w-[252px] " src="images/w-logo.png">
+			</div>
+
+			<!--menu-->
+			<div class="flex justify-center items-center relative">
+
+				<ul class="flex md:flex-row justify-center items-center mt-[60px] ml-5 hidden md:block w-[100%]" style="display: flex;">
+					<li class="flex flex-col justify-center items-center mx-1">
+						<div class="h-[250px] mt-[-150px]" style="border-right: 2px dashed #ffdb27;"></div>
+						<a class="text-[17px]" href="index.html">Home</a>
+					</li>
+					<li class="flex flex-col justify-center items-center mx-2">
+						<div class="h-[250px]  mt-[-240px]" style="border-right: 2px dashed #ffdb27;"></div>
+						<a class="text-[17px]" href="portfolio.html">Portfolio</a>
+					</li>
+					<li class="flex flex-col justify-center items-center mx-1">
+						<div class="h-[250px]  mt-[-180px]" style="border-right: 2px dashed #ffdb27;"></div>
+						<a class="text-[17px]" href="services.html">Services</a>
+					</li>
+					<li class="flex flex-col justify-center items-center mx-2">
+						<div class="h-[250px]  mt-[-55px]" style="border-right: 2px dashed #ffdb27;"></div>
+						<a class="text-[17px]" href="cunsultency.html">Cunsultency</a>
+					</li>
+					<li class="flex flex-col justify-center items-center mx-1">
+						<div class="h-[250px]  mt-[-190px]" style="border-right: 2px dashed #ffdb27;"></div>
+						<a class="text-[17px]" href="about.html">About</a>
+					</li>
+					<li class="flex flex-col justify-center items-center mx-2">
+						<a class="flex justify-center items-center text-[16px] bg-[#ffdc2d] rounded-md px-4 py-2 ml-2"
+							href="contact.html" style="box-shadow: inset 4px 4px 10px rgba(255,255,255,250,0.5);">
+							<i class="fa-sharp fa-solid fa-phone text-[16px] mr-2"></i>
+							Contact
+						</a>
+					</li>
+				</ul>
+
+				<input class="hidden" type="checkbox" value="" id="check" />
+				<label class="block md:hidden relative left-[200px]" for="check">
+					<i class="fa-solid fa-bars"></i>
+				</label>
+
+				<ul
+					class="md:hidden block z-20 flex justify-center items-start flex-col bg-[#ecf2fb] relative top-[155px] relative py-1 pr-[100%] left-[-150%]">
+					<li class="flex justify-center items-center mx-2 my-2">
+						<a class="text-[17px]" href="index.html">Home</a>
+					</li>
+					<li class="flex justify-center items-center mx-2 my-2">
+						<a class="text-[17px]" href="portfolio.html">Portfolio</a>
+					</li>
+					<li class="flex justify-center items-center mx-2 my-2">
+						<a class="text-[17px]" href="services.html">Services</a>
+					</li>
+					<li class="flex justify-center items-center mx-2 my-2">
+						<a href="cunsultency.html" class="text-[17px]">Cunsultency</a>
+					</li>
+					<li class="flex justify-center items-center mx-2 my-2">
+						<a class="text-[17px]" href="about.html">About</a>
+					</li>
+					<li class="flex justify-center items-center mx-2mt-1 bg-[#ffdb27] px-3 py-2 rounded-md shadow mx-1">
+						<a class="text-[17px] flex justify-center items-center" href="contact.html">
+							<i class="fa-sharp fa-solid fa-phone text-[16px] mr-2"></i>
+							Contact
+						</a>
+					</li>
+				</ul>
+
+			</div>
+
+		</div>
+	</nav>
+	<!--navbar-->
+
+
+	<!--section(1)-->
+	<section class="flex justify-center items-center">
+		<div class="flex flex-col md:flex-row justify-center items-center w-[80%] md:h-[80vh]">
+			<div class="flex flex-col justify-center items-start pt-4">
+				<h1 class="text-[62px] font-bold text-[#4f4f4f] my-1">Transform</h1>
+				<h2 class="text-[27px] text-[#4b505e] my-1">Your Vision With Whiltor</h2>
+				<p class="">Connect with the most trusted and satisfactory consultancy firm all round the globe and
+					<strong class="text-[#4f4f4f]">Drive Your Journey To Peek!</strong>
+				</p>
+				<a class="my-5 p flex bg-[#ffdb27] rounded-md py-3 px-6 shadow-md" href=""
+					style="box-shadow: inset 2px 1px 4px #afafaf;">
+					Request A Callback
+					<i class="fa-sharp fa-solid fa-phone text-[16px] mr-2"></i>
+				</a>
+			</div>
+			<div class="flex justify-center items-center">
+				<div class="flex justify-center items-center mt-20">
+					<img class="" src="images/home.png">
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<!--section(2)-->
+	<section class="flex justify-center items-center bg-[#ecf2fb]">
+		<div class="flex flex-col justify-center items-center w-[85%] md:w-[86%] min-h-[100vh] pt-20">
+
+			<!--top-->
+			<div class="flex flex-wrap justify-between items-center md:mx-">
+				<div
+					class="flex flex-col justify-center items-start w-full md:w-[22%] px-4 py-4 my-6 md:my-2 md:mx-2 bg-[#fff] rounded-md border-b-[5px] border-[#dbcef0] relative">
+					<div class="self-end mt-[-30px] absolute top-[-0px]">
+						<i
+							class="fa-solid fa-medal flex justify-center text-[#8B6FC0] text-[36px] items-center bg-[#dbcef0] w-[70px] h-[70px] rounded-md shadow-xl"></i>
+					</div>
+					<div class="text-[32px] text-[#777]">
+						<h3>Trust</h3>
+					</div>
+					<div class="flex">
+						<p class="text-[#4f4f4f]">
+							Trust Whiltor with your Business And Drive Your Journey To Peek!
+						</p>
+					</div>
+				</div>
+
+				<div
+					class="flex flex-col justify-center items-start w-full md:w-[22%] px-4 py-4 my-6 md:my-2 md:mx-2 bg-[#fff] rounded-md border-b-[5px] border-[#FFEEBA] relative">
+					<div class="self-end mt-[-30px] absolute top-[-0px]">
+						<i
+							class="fa-solid fa-star flex justify-center text-[#D98A19] text-[36px] items-center bg-[#FFEEBA] w-[70px] h-[70px] rounded-md shadow-xl"></i>
+					</div>
+					<div class="text-[32px] text-[#777]">
+						<h3>Trust</h3>
+					</div>
+					<div class="flex">
+						<p class="text-[#4f4f4f]">
+							Trust Whiltor with your Business And Drive Your Journey To Peek!
+						</p>
+					</div>
+				</div>
+
+				<div
+					class="flex flex-col justify-center items-start w-full md:w-[22%] px-4 py-4 my-6 md:my-2 md:mx-2 bg-[#fff] rounded-md border-b-[5px] border-[#a9e0e0] relative">
+					<div class="self-end mt-[-30px] absolute top-[-0px]">
+						<i
+							class="fa-solid fa-tools flex justify-center text-[#3cacac] text-[36px] items-center bg-[#a9e0e0] w-[70px] h-[70px] rounded-md shadow-xl"></i>
+					</div>
+					<div class="text-[32px] text-[#777]">
+						<h3>Trust</h3>
+					</div>
+					<div class="flex">
+						<p class="text-[#4f4f4f]">
+							Trust Whiltor with your Business And Drive Your Journey To Peek!
+						</p>
+					</div>
+				</div>
+
+				<div
+					class="flex flex-col justify-center items-start w-full md:w-[22%] px-4 py-4 my-6 md:my-2 md:mx-2 bg-[#fff] rounded-md border-b-[5px] border-[#b0c4e7] relative">
+					<div class="self-end mt-[-30px] absolute top-[-0px]">
+						<i
+							class="fa-solid fa-smile flex justify-center text-[#1a2942] text-[36px] items-center bg-[#b0c4e7] w-[70px] h-[70px] rounded-md shadow-xl"></i>
+					</div>
+					<div class="text-[32px] text-[#777]">
+						<h3>Trust</h3>
+					</div>
+					<div class="flex">
+						<p class="text-[#4f4f4f]">
+							Trust Whiltor with your Business And Drive Your Journey To Peek!
+						</p>
+					</div>
+				</div>
+
+
+			</div>
+
+			<!--bottom-->
+			<div class="flex flex-col justify-center items-center my-5 md:mt-20">
+				<!--top-->
+				<div class="flex flex-col flex justify-center items-center">
+					<h3 class="text-[23px] md:text-[28px] text-center">Achieve Your Dynamic Business Goals and</h3>
+					<h4 class="text-[21px] md:text-[24px] text-center text-[#444]">Build a Better Future with Whiltor
+					</h4>
+				</div>
+
+				<!--bottom-->
+				<div class="flex flex-col md:flex-row justify-center items-center">
+					<!--img-->
+					<div class="flex justify-center items-center md:my-2">
+						<div class="flex justify-center items-center md:mx-5  w-[280px] md:w-[420px]">
+							<img class="l-img-girl" src="images/img21NoShadowNoBg.png" alt="sec-2-girl">
+						</div>
+					</div>
+					<!--text-->
+					<div class="flex flex-col justify-start items-center mt-10">
+						<div class="w-full md:w-[80%] px-2">
+							<p class="text-center md:text-left text-[17px] text-[#4f4f4f]">
+								Whiltor ensures your company's long-term success by leveraging our expertise and
+								conceptual understanding. Our goal is to carry out your plan, and your faith is our
+								greatest strength. It's never been easier to connect with consulting services and launch
+								your company into a new era of quick growth by implementing cutting-edge technology and
+								marketing strategies.
+							</p>
+						</div>
+						<div class="flex flex-col md:flex-row justify-center items-center md:self-start md:ml-20 mt-10">
+							<div class="flex flex-col justify-start items-center md:mx-3 my-3">
+								<img class="w-full md:w-[50px]" src="images/icons8-monitor.gif">
+								<p class="text-[#4f4f4f] text-[17px] mt-3 text-[17px]">Know About Us</p>
+							</div>
+							<div class="flex flex-col justify-center items-center md:mx-3 my-5">
+								<img class="w-full md:w-[50px]" src="images/icons8-connect.gif">
+								<p class="text-[#4f4f4f] text-[17px] mt-3 text-[17px]">Connect With Us</p>
+							</div>
+							<div class="flex flex-col justify-center items-center md:mx-3 my-3">
+								<img class="w-full md:w-[50px]" src="images/icons8-futures.gif">
+								<p class="text-[#4f4f4f] text-[17px] mt-3 text-[17px]">Grow With Us</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+	<!--arraow-banner-->
+	<img class="w-100%" src="images/sec-3-cut1.png" style="vertical-align: middle;">
+
+	<!--section(3)-->
+	<section class="flex justify-center items-center bg-[#1A2942]">
+		<div class="flex flex-col justify-center items-center w-[85%] md:w-[80%] min-h-[50vh] py-6">
+			<div class="flex justify-center items-center mb-5">
+				<h2 class="uppercase text-[#fff] text-[24px] md:text-[42px] text-center">
+					GET A GLIMPSES
+				</h2>
+			</div>
+			<div class="flex flex-wrap justify-center items-center mt-5">
+				<iframe class="md:mr-20 my-10 w-[300px] md:w-[472px] h-[170px] md:h-[265px]"
+					src="https://www.youtube.com/embed/S-WPnIDovk4" title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen>
+				</iframe>
+				<iframe class="md:ml-20 my-10 w-[300px] md:w-[472px] h-[170px] md:h-[265px]"
+					src="https://www.youtube.com/embed/QKL46wxu_ek" title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen>
+				</iframe>
+			</div>
+		</div>
+	</section>
+
+	<!--arraow-banner-->
+	<img src="images/sec-3-cut2.png" width="100%" style="vertical-align: middle;">
+
+
+
+	<!--section(4)-->
+	<section class="flex justify-center items-center">
+		<div class="flex flex-col justify-center items-center min-h-[100vh]">
+
+			<!--top-->
+			<div class="flex justify-center items-center mb-20">
+				<h2 class="text-[36px] font-bold uppercase">Our Featuring Services<h2>
+			</div>
+
+			<!--bottom-->
+			<div class="flex justify-center items-center mt-20">
+				<!--1st-->
+				<div class="relative flex justify-center items-center border border-[12px] border-[#1A2942] rounded-full h-[380px] w-[380px] rotate-[-35deg] mx-5" style="border-top-color: #ecf2fb; border-left-color: #ecf2fb;">
+					<div class="flex flex-col justify-center items-center rotate-[35deg] p-10 pr-10">
+						
+						<div class="relative z-[45] bg-[#fff] top-[-95px] right-10 bottom-5 flex justify-center items-center rounded-full shadow-[0px_0px_20px_rgba(0,0,0,0.2)] w-[150px] h-[150px]">
+							<div class=" bg-[#fff] flex justify-center items-center rounded-full shadow-[4px_4px_20px_rgba(0,0,0,0.2)] w-[120px] h-[120px]">
+								<img class=" w-[55px]" src="images/sec-4-3bx-1st.png">
+							</div>
+						</div>
+
+						<div class="relative flex justify-center items-center my-3 right-10 bottom-[60px]">
+							<p class="flex justify-center items-center text-[20px] mr-[-30px] z-[40] p-2 bg-[#fff] rounded-[40px] w-[50px] h-[50px] shadow-[2px_2px_20px_rgba(0,0,0,0.2)]">01</p>
+							<p class="bg-[#fff] text-[20px] px-10 py-2 rounded-[40px] shadow-[4px_4px_30px_rgba(0,0,0,0.2)]">Branding</p>
+						</div>
+
+						<div class="relative flex justify-center items-center my-3 right-10 bottom-[60px]">
+							<p class="text-center text-[16.3px]">Create a powerful brand image that stands out in the market and increase your audience by ten folds.</p>
+						</div>
+
+						<div class="flex justify-center items-center relative relative top-5 right-10">
+							<div class="flex justify-center items-center absolute w-[50px] h-[50px] bg-[#fff] rounded-full home-page-bx-shdow-effec1"></div>
+						</div>
+						
+					</div>
+				</div>
+				
+				<!--2nd-->
+				<div class="relative flex justify-center items-center border border-[12px] border-[#1A2942] rounded-full h-[380px] w-[380px] rotate-[-35deg] mx-5" style="border-top-color: #ecf2fb; border-left-color: #ecf2fb;">
+					<div class="flex flex-col justify-center items-center rotate-[35deg] p-10 pr-10">
+						
+						<div class="relative z-[45] bg-[#fff] top-[-95px] right-10 bottom-5 flex justify-center items-center rounded-full shadow-[0px_0px_20px_rgba(0,0,0,0.2)] w-[150px] h-[150px]">
+							<div class=" bg-[#fff] flex justify-center items-center rounded-full shadow-[4px_4px_20px_rgba(0,0,0,0.2)] w-[120px] h-[120px]">
+								<img class=" w-[55px]" src="images/sec-4-3bx-1st.png">
+							</div>
+						</div>
+
+						<div class="relative flex justify-center items-center my-3 right-10 bottom-[60px]">
+							<p class="flex justify-center items-center text-[20px] mr-[-30px] z-[40] p-2 bg-[#fff] rounded-[40px] w-[50px] h-[50px] shadow-[2px_2px_20px_rgba(0,0,0,0.2)]">01</p>
+							<p class="bg-[#fff] text-[18px] px-10 py-2 rounded-[40px] shadow-[4px_4px_30px_rgba(0,0,0,0.2)]">Product Development</p>
+						</div>
+
+						<div class="relative flex justify-center items-center my-3 right-10 bottom-[60px]">
+							<p class="text-center text-[16.3px]">Create a powerful brand image that stands out in the market and increase your audience by ten folds.</p>
+						</div>
+
+						<div class="flex justify-center items-center relative relative top-5 right-10">
+							<div class="flex justify-center items-center absolute w-[50px] h-[50px] bg-[#fff] rounded-full home-page-bx-shdow-effec1"></div>
+						</div>
+						
+					</div>
+				</div>
+				
+				<!--3rd-->
+				<div class="relative flex justify-center items-center border border-[12px] border-[#1A2942] rounded-full h-[380px] w-[380px] rotate-[-35deg] mx-5" style="border-top-color: #ecf2fb; border-left-color: #ecf2fb;">
+					<div class="flex flex-col justify-center items-center rotate-[35deg] p-10 pr-10">
+						
+						<div class="relative z-[45] bg-[#fff] top-[-95px] right-10 bottom-5 flex justify-center items-center rounded-full shadow-[0px_0px_20px_rgba(0,0,0,0.2)] w-[150px] h-[150px]">
+							<div class=" bg-[#fff] flex justify-center items-center rounded-full shadow-[4px_4px_20px_rgba(0,0,0,0.2)] w-[120px] h-[120px]">
+								<img class=" w-[55px]" src="images/sec-4-3bx-1st.png">
+							</div>
+						</div>
+
+						<div class="relative flex justify-center items-center my-3 right-10 bottom-[60px]">
+							<p class="flex justify-center items-center text-[20px] mr-[-30px] z-[40] p-2 bg-[#fff] rounded-[40px] w-[50px] h-[50px] shadow-[2px_2px_20px_rgba(0,0,0,0.2)]">01</p>
+							<p class="bg-[#fff] text-[20px] px-10 py-2 rounded-[40px] shadow-[4px_4px_30px_rgba(0,0,0,0.2)]">Branding</p>
+						</div>
+
+						<div class="relative flex justify-center items-center my-3 right-10 bottom-[60px]">
+							<p class="text-center text-[16.3px]">Create a powerful brand image that stands out in the market and increase your audience by ten folds.</p>
+						</div>
+
+						<div class="flex justify-center items-center relative relative top-5 right-10">
+							<div class="flex justify-center items-center absolute w-[50px] h-[50px] bg-[#fff] rounded-full home-page-bx-shdow-effec1"></div>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+	</section>
+
+
+
+	<!--section(5)-->
+	<section class="flex justify-center items-center">
+		<div class="flex flex-col justify-center items-center w-[90%] md:w-[90%] min-h-[100vh] py-10 mt-5">
+			<!--top-->
+			<div class="flex flex-col justify-center items-center md:mb-20">
+				<h2 class="text-center font-bold text-[32px] py-2">WORK WITH WHILTOR</h2>
+				<h3 class="text-center text-[#4f4f4f] py-2 text-[17px] mb-[8rem] md:mb-0">Simple steps to work with
+					Whiltor</h3>
+			</div>
+
+			<!--bottom-->
+			<div class="flex flex-col md:flex-row justify-center items-center md:mt-10">
+				<div
+					class="flex flex-col justify-center items-center w-fill md:w-[22%] mx-5 px-5 my-[5rem] md:my-10 bg-[#fff] shadow-md rounded-[10px] border-2 border-solid border-[#f2f4f8] translate-effect">
+					<img class="w-[290px] mt-[-100px]" src="images/s5-1st.png">
+					<h3 class="text-[22px] text-[#4f4f4f] my-5">Confused??</h3>
+					<p class="text-left text-[#4f4f4f] mt-5 mb-10">
+						Are you seeking for a platform that can help your business expand by providing solutions?
+					</p>
+				</div>
+
+				<div
+					class="flex flex-col justify-center items-center w-fill md:w-[22%] mx-5 px-5 my-[5rem] md:my-10 bg-[#fff] shadow-md rounded-[10px] border-2 border-solid border-[#f2f4f8] translate-effect">
+					<img class="w-[290px] mt-[-100px]" src="images/s5-2nd.png">
+					<h3 class="text-[22px] text-[#4f4f4f] my-5">Learn About Whiltor</h3>
+					<p class="text-left text-[#4f4f4f] mt-5 mb-10">
+						Connect with us to learn more about Whiltor and how it can help you grow your business.
+					</p>
+				</div>
+
+				<div
+					class="flex flex-col justify-center items-center w-fill md:w-[22%] mx-5 px-5 my-[5rem] md:my-10 bg-[#fff] shadow-md rounded-[10px] border-2 border-solid border-[#f2f4f8] translate-effect">
+					<img class="w-[290px] mt-[-100px]" src="images/s5-3rd.png">
+					<h3 class="text-[22px] text-[#4f4f4f] my-5">Connect with Us</h3>
+					<p class="text-left text-[#4f4f4f] mt-5 mb-10">
+						Contact with us via our website, phone number, or any other social media platform.
+					</p>
+				</div>
+
+				<div
+					class="flex flex-col justify-center items-center w-fill md:w-[22%] mx-5 px-5 my-[5rem] md:my-10 bg-[#fff] shadow-md rounded-[10px] border-2 border-solid border-[#f2f4f8] translate-effect">
+					<img class="w-[290px] mt-[-100px]" src="images/s5-4th.png">
+					<h3 class="text-[22px] text-[#4f4f4f] my-5">Enjoy Success</h3>
+					<p class="text-left text-[#4f4f4f] mt-5 mb-10">
+						After you've connected with us, leave everything to us and drive your journey to peek.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<!--section(6)-->
+	<section class="flex justify-center items-center">
+		<div class="flex flex-col justify-center items-center w-[90%] md:w-[90%] min-h-[100vh] pb-10">
+			<div class="flex justify-center items-center">
+				<h2 class="font-bold text-[32px] text-center">COLLABORATE WITH WHILTOR</h2>
+			</div>
+
+			<div class="flex flex-col justify-center items-center md:flex-row">
+				<div class="flex justify-center items-center w-full md:w-1/2 md:py-10">
+					<div class=" md:mx-20 my-10">
+						<img class="" src="images/3d-hands-handshake-2.png" width="250px">
+					</div>
+				</div>
+				<div class="flex flex-col justify-center items-center w-full md:w-1/2 md:items-start">
+					<h3 class="text-[#4f4f4f] text-[22px] my-2 text-center md:text-left">Collaboration is Always Better
+					</h3>
+					<p class="text-[#4f4f4f] text-[17px] my-2 text-center md:text-left">For a healthy and continual
+						growth, connect with whiltor. Working with Whiltor provides you an edge over competitors in your
+						field of expertise, allowing you to expand your business. We provide everything you need for
+						your business to succeed, from consulting to development.</p>
+					<button
+						class="text-[15px] uppercase my-3 outline outline-[2px] outline-[#333] rounded-md px-5 py-1">Contact
+						Us</button>
+				</div>
+			</div>
+
+			<div class="flex flex-col justify-center items-center w-full md:flex-row my-20">
+
+				<div
+					class="flex flex-col justify-center items-center md:flex-row rounded-full p-2 bg-[#fff] sec-inner-box border border-[20px] border-[#1A2942] border-r-[#ecf2fb] md:rotate-[-45deg] rotate-[45deg]">
+					<div class="flex flex-col justify-center items-center rounded-full p-1 w-[140px] h-[140px] bg-[#fffaa] sec-inner-box  md:rotate-[45deg] rotate-[-45deg]"
+						style="box-sizing: content-box;">
+						<p class="my-3 text-[20px] font-bold uppercase text-[#4f4f4f]">setup</p>
+						<i class="fa-solid fa-user text-[36px] text-[#1a2942]"></i>
+					</div>
+				</div>
+
+				<div class="md:ml-[-20px] ml-0 mt-[-20px] md:mt-0 flex flex-col justify-center items-center md:flex-row rounded-full p-2 bg-[#fffaa] sec-inner-box border border-[20px] border-[#1A2942] border-b-[#ecf2fb] border-l-[#ecf2fb] md:rotate-[-45deg] rotate-[45deg]"
+					style="border-left-color: transparent;">
+					<div class="flex flex-col justify-center items-center rounded-full p-1 w-[140px] h-[140px] bg-[#fff] sec-inner-box  md:rotate-[45deg] rotate-[-45deg]"
+						style="box-sizing: content-box;">
+						<p class="my-3 text-[20px] font-bold uppercase text-[#4f4f4f]">choose</p>
+						<i class="fa-solid fa-cart-shopping text-[36px] text-[#1a2942]"></i>
+					</div>
+				</div>
+
+				<div class="md:ml-[-20px] ml-0 mt-[-20px] md:mt-0 flex flex-col justify-center items-center md:flex-row rounded-full p-2 bg-[#fffaa] sec-inner-box border border-[20px] border-[#1A2942] border-t-[#ecf2fb] border-r-[#ecf2fb] md:rotate-[-45deg] rotate-[45deg]"
+					style="border-top-color: transparent;">
+					<div class="flex flex-col justify-center items-center rounded-full p-1 w-[140px] h-[140px] bg-[#fff] sec-inner-box  md:rotate-[45deg] rotate-[-45deg]"
+						style="box-sizing: content-box;">
+						<p class="my-3 text-[20px] font-bold uppercase text-[#4f4f4f]">checkout</p>
+						<i class="fa-solid fa-circle-check text-[36px] text-[#1a2942]"></i>
+					</div>
+				</div>
+
+				<div class="md:ml-[-20px] ml-0 mt-[-20px] md:mt-0 flex flex-col justify-center items-center md:flex-row rounded-full p-2 bg-[#fffaa]
+					sec-inner-box border border-[20px] border-[#1A2942] border-l-[#ecf2fb] border-b-[#ecf2fb]
+					md:rotate-[-45deg] rotate-[45deg]" style="border-left-color: transparent;">
+					<div class="flex flex-col justify-center items-center rounded-full p-1 w-[140px] h-[140px] bg-[#fff] sec-inner-box md:rotate-[45deg] rotate-[-45deg]"
+						style="box-sizing: content-box;">
+						<p class="my-3 text-[20px] font-bold uppercase text-[#4f4f4f]">succeed</p>
+						<i class="fa-solid fa-award text-[36px] text-[#1a2942]"></i>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		</div>
+	</section>
+
+
+
+	<!--section(7)-->
+	<section class="flex justify-center items-center">
+		<div class="flex flex-col justify-center items-center w-[90%] md:w-[90%] min-h-[100vh] pb-10">
+			<div class="flex flex-col justify-center items-center">
+				<h2 class="font-bold text-[32px] text-center">BENIFITS</h2>
+				<h3 class="text-[17px] text-center text-[#4f4f4f] mt-5">
+					Whiltor offers you a full range of services, from planning to execution.
+				</h3>
+			</div>
+
+			<div class="flex flex-wrap justify-center items-center mt-20 py-5">
+
+				<div class="flex flex-col justify-center items-center shadow-[0px_0px_10px_rgba(0,0,0,0.1)] w-full md:w-[230px] md:h-[350px] my-10 mx-10 relative se-5cards-effect1 overflow-hidden">
+					<div class="hidden-cir-effect bg-[#ffd861]"></div>
+					<div class="flex justify-center items-center outline outline-[2px] p-[5px] outline-[#ffd861] rounded-full z-10 sec-5-outer-circle1">
+						<div class="flex justify-center items-center bg-[#ffd861] rounded-full w-[120px] h-[120px] relative left-[2px] top-[2px] sec-5-inner-circle1">
+							<i class="fa-solid fa-headset text-[50px] text-[#d98a19]"></i>
+						</div>
+					</div>
+					<div class="flex justify-center items-center mt-8 mb-10 z-10">
+						<h4 class="text-[#4f4f4f] text-center text-[18px]">Consultancy</h4>
+					</div>
+				</div>
+				
+				<div class="flex flex-col justify-center items-center shadow-[0px_0px_10px_rgba(0,0,0,0.1)] w-full md:w-[230px] md:h-[350px] my-10 mx-10 relative se-5cards-effect2 overflow-hidden">
+					<div class="hidden-cir-effect bg-[#B8F9D3]"></div>
+					<div class="flex justify-center items-center outline outline-[2px] p-[5px] outline-[#B8F9D3] rounded-full z-10 sec-5-outer-circle2">
+						<div class="flex justify-center items-center bg-[#B8F9D3] rounded-full w-[120px] h-[120px] relative left-[2px] top-[2px] sec-5-inner-circle2">
+							<i class="fa-solid fa-bullhorn text-[50px] text-[#4fc391]"></i>
+						</div>
+					</div>
+					<div class="flex justify-center items-center mt-8 mb-10 z-10">
+						<h4 class="text-[#4f4f4f] text-center text-[18px]">Consultancy</h4>
+					</div>
+				</div>
+				
+				<div class="flex flex-col justify-center items-center shadow-[0px_0px_10px_rgba(0,0,0,0.1)] w-full md:w-[230px] md:h-[350px] my-10 mx-10 relative se-5cards-effect3 overflow-hidden">
+					<div class="hidden-cir-effect bg-[#CEB2FC]"></div>
+					<div class="flex justify-center items-center outline outline-[2px] p-[5px] outline-[#CEB2FC] rounded-full z-10 sec-5-outer-circl3">
+						<div class="flex justify-center items-center bg-[#CEB2FC] rounded-full w-[120px] h-[120px] relative left-[2px] top-[2px] sec-5-inner-circl3">
+							<i class="fas fa-crown text-[50px] text-[#8b6fc0]"></i>
+						</div>
+					</div>
+					<div class="flex justify-center items-center mt-8 mb-10 z-10">
+						<h4 class="text-[#4f4f4f] text-center text-[18px]">Consultancy</h4>
+					</div>
+				</div>
+				
+				<div class="flex flex-col justify-center items-center shadow-[0px_0px_10px_rgba(0,0,0,0.1)] w-full md:w-[230px] md:h-[350px] my-10 mx-10 relative se-5cards-effect4 overflow-hidden">
+					<div class="hidden-cir-effect"></div>
+					<div class="flex justify-center items-center outline outline-[2px] p-[5px] outline-[#DCE9FF] rounded-full z-10 sec-5-outer-circl4">
+						<div class="flex justify-center items-center bg-[#DCE9FF] rounded-full  w-[120px] h-[120px] relative left-[2px] top-[2px] sec-5-inner-circl4">
+							<i class="fa-solid fa-gear text-[50px] text-[#3b6cb7]"></i>
+						</div>
+					</div>
+					<div class="flex justify-center items-center mt-8 mb-10 z-10">
+						<h4 class="text-[#4f4f4f] text-center text-[18px]">Consultancy</h4>
+					</div>
+				</div>
+				
+				<div class="flex flex-col justify-center items-center shadow-[0px_0px_10px_rgba(0,0,0,0.1)] w-full md:w-[230px] md:h-[350px] my-10 mx-10 relative se-5cards-effect5 overflow-hidden">
+					<div class="hidden-cir-effect"></div>
+					<div class="flex justify-center items-center outline outline-[2px] p-[5px] outline-[#A9E0E0] rounded-full z-10 sec-5-outer-circl5">
+						<div class="flex justify-center items-center bg-[#A9E0E0] rounded-full  w-[120px] h-[120px] relative left-[2px] top-[2px] sec-5-inner-circl5">
+							<i class="fa-solid fa-chalkboard-teacher text-[50px] text-[#3CACAC]"></i>
+						</div>
+					</div>
+					<div class="flex justify-center items-center mt-8 mb-10 z-10">
+						<h4 class="text-[#4f4f4f] text-center text-[18px]">Consultancy</h4>
+					</div>
+				</div>
+				
+				<div class="flex flex-col justify-center items-center shadow-[0px_0px_10px_rgba(0,0,0,0.1)] w-full md:w-[230px] md:h-[350px] my-10 mx-10 relative se-5cards-effect6 overflow-hidden">
+					<div class="hidden-cir-effect"></div>
+					<div class="flex justify-center items-center outline outline-[2px] p-[5px] outline-[#DCE9FF] rounded-full z-10 sec-5-outer-circl6">
+						<div class="flex justify-center items-center bg-[#DCE9FF] rounded-full  w-[120px] h-[120px] relative left-[2px] top-[2px] sec-5-inner-circl6">
+							<i class="fas fa-user text-[50px] text-[#1a2942]"></i>
+						</div>
+					</div>
+					<div class="flex justify-center items-center mt-8 mb-10 z-10">
+						<h4 class="text-[#4f4f4f] text-center text-[18px]">Consultancy</h4>
+					</div>
+				</div>
+				
+				<div class="flex flex-col justify-center items-center shadow-[0px_0px_10px_rgba(0,0,0,0.1)] w-full md:w-[230px] md:h-[350px] my-10 mx-10 relative se-5cards-effect7 overflow-hidden">
+					<div class="hidden-cir-effect"></div>
+					<div class="flex justify-center items-center outline outline-[2px] p-[5px] outline-[#FFDBE9] rounded-full z-10 sec-5-outer-circl7">
+						<div class="flex justify-center items-center bg-[#FFDBE9] rounded-full w-[120px] h-[120px] relative left-[2px] top-[2px] sec-5-inner-circl7">
+							<i class="fas fa-network-wired text-[50px] text-[#F7316E]"></i>
+						</div>
+					</div>
+					<div class="flex justify-center items-center mt-8 mb-10 z-10">
+						<h4 class="text-[#4f4f4f] text-center text-[18px]">Consultancy</h4>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+
+	<!--section(8)-->
+	<section class="flex justify-center items-center">
+		<div class="flex flex-col justify-center items-center w-[90%] md:w-[90%] min-h-[100vh]  pb-20">
+			<div class="flex flex-col justify-center items-center">
+				<h2 class="font-bold text-[32px] text-center">ADVANTAGES OF CHOOSING US</h2>
+				<h3 class="text-[17px] text-center text-[#4f4f4f] mt-5">Our Work Speaks for Us.</h3>
+			</div>
+
+			<div class="flex flex-wrap-reverse md:flex-wrap justify-center items-center mt-20 py-5">
+				<div class="flex flex-col justify-center items-center w-full md:w-1/2">
+					<div class="flex flex-col justify-center items-start bg-[#fff] shadow rounded-md mt-5 mb-10 px-5">
+						<img class="my-1 " src="images/wrench.gif" alt="" width="60px">
+						<h4 class="my-2 text-[20px] text-[#4f4f4f]">Personalised plans for your requirements</h4>
+						<h5 class="text-[grey] pb-5">For us, your vision is everything, and we will first understand
+							your
+							business and goals before recommending the best plans for your growth.
+						</h5>
+					</div>
+
+					<div class="flex flex-col justify-center items-start bg-[#fff] shadow rounded-md my-5 px-5">
+						<img class="my-1" src="images/wrench.gif" alt="" width="60px">
+						<h4 class="my-2 text-[20px] text-[#4f4f4f]">Personalised plans for your requirements</h4>
+						<h5 class="text-[grey] pb-5">For us, your vision is everything, and we will first understand
+							your
+							business and goals before recommending the best plans for your growth.
+						</h5>
+					</div>
+
+					<div class="flex flex-col justify-center items-start bg-[#fff] shadow rounded-md my-5 px-5">
+						<img class="my-1 " src="images/wrench.gif" alt="" width="60px">
+						<h4 class="my-2 text-[20px] text-[#4f4f4f]">Personalised plans for your requirements</h4>
+						<h5 class="text-[grey] pb-5">For us, your vision is everything, and we will first understand
+							your
+							business and goals before recommending the best plans for your growth.
+						</h5>
+					</div>
+
+				</div>
+				<div class="flex flex-col justify-center items-center">
+					<img src="images/s8-girl-1.png" alt="" width="632px">
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<!--section(9)-->
+	<section class="flex justify-center items-center">
+		<div class="flex flex-col justify-center items-center w-[90%] md:w-[80%] min-h-[50vh] pb-10 my-10 relative">
+			<img class="s9-float-img" src="images/book-service.png" width="280px">
+			<div class="flex flex-col md:flex-row justify-center items-center px-8 pb-8 shadow-md-effect">
+				<div class="flex flex-col justify-center items-start">
+					<div class="text-[32px] text-[#4f4f4f] w-full md:w-1/2 pt-5 mt-10 md:mt-0 md:pt-0">
+						Request a callback
+					</div>
+					<div class="text-[grey] w-full md:w-[72%] max-w-[100%] text-[16.6px]">
+						Are you stuck on something that is interfering with your dream project? Connect with us now.
+						We
+						offer solutions for all of your challenges, from project development to branding and
+						marketing,
+						we can meet all of your requirements. With just a phone call, you may have all of your
+						services
+						delivered right to your door.
+					</div>
+				</div>
+				<div class="flex justify-center items-center relative rounded-[60px] w-[240px] md:w-[400px] py-3 px-2"
+					style="background: linear-gradient(to right bottom, #3EC4ED, #1A2942);">
+					<p
+						class="flex justify-center items-center hidden text-[20px] absolute rounded-[60px] py-3 px-2 w-[200px] bg-[#4f4f4f]">
+						093 43514559</p>
+					<a class="flex justify-center items-center text-[18px] text-[#fff] relative rounded-[60px] w-[200px] px-2"
+						href="#">Call Us</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!--footer-->
+	<footer th:fragment="footer-home" class="flex justify-center items-center md:bg-[url('images/SKYLINE_FOOTER_lighter-04.png')] md:bg-cover md:w-[100%] bg-center ">
+		<div class="relatvie flex justify-center items-center min-h-[80vh] w-[90%] md:w-[90%] mb-20">
+			
+			<div class="flex justify-center items-center w-[100%] mb-20">
+				
+				<ul class="flex md:flex-row flex-col justify-center items-start w-[100%] mb-20">
+					
+					<li class="flex flex-col justify-center items-start md:w-1/4 w-full">
+						<h3 class="text-[20px] text-[#1a2942] font-bold mb-10">Get in Touch</h3>
+						<p class="text-[#53538C] text-[17px] my-2 md:w-[70%] w-full mb-4">Don’t miss any updates of our new schemes and services! </p>
+						<form class="" action="" method="post">
+							<input class="rounded md:w-[290px] w-[300px] px-2 py-1 border border-2 border-[#aeaeae] text-[#444] text-[18px] form-controlq" type="text" name="" placeholder="Email" required></input>
+							<br>
+							<button
+								class="uppercase text-[#fff] text-[13px] bg-[#FFCE00] rounded w-[120px] h-[40px] btn btn-brightyellow my-5"
+								type="submit">Subscribe</button>
+						</form>
+					</li>
+
+					<li class="flex flex-col justify-center items-start md:w-1/4 w-full mb-3 md:mb-0">
+						<h3 class="text-[20px] text-[#1a2942] font-bold md:mb-10 mb-3">Download</h3>
+						<a class="text-[#53538C] text-[17px] my-2" href="">Home</a>
+						<a class="text-[#53538C] text-[17px] my-2" href="">About</a>
+					</li>
+
+					<li class="flex flex-col justify-center items-start md:w-1/4 w-full mb-3 md:mb-0">
+						<h3 class="text-[20px] text-[#1a2942] font-bold md:mb-10 mb-3">Services</h3>
+						<a class="text-[#53538C] text-[17px] my-2" href="">Cunsultency</a>
+						<a class="text-[#53538C] text-[17px] my-2" href="">Contact</a>
+						<a class=" text-[#53538C] text-[17px] my-2" href="">All Services</a>
+					</li>
+
+					<li class="flex flex-col justify-center items-start md:w-1/4 w-full mb-3 md:mb-0">
+						<h3 class="text-[20px] text-[#1a2942] font-bold md:mb-10 mb-3">Connect the Network</h3>
+						<ul class="flex justify-center items-center my-3">
+							<li class="mx-1 social-li">
+								<i
+									class="fa-brands fa-linkedin flex justify-center items-center text-[#858da8] text-[26px] border border-[1px] border-[##858da8] rounded-full w-[45px] h-[45px] social-media-hover-efffext"></i>
+							</li>
+
+							<li class="mx-1 social-li">
+								<i
+									class="fa-brands fa-facebook flex justify-center items-center text-[#858da8] text-[26px] border border-[1px] border-[##858da8] rounded-full w-[45px] h-[45px] social-media-hover-efffext"></i>
+							</li>
+
+							<li class="mx-1 social-li">
+								<i
+									class="fa-brands fa-instagram flex justify-center items-center text-[#858da8] text-[26px] border border-[1px] border-[##858da8] rounded-full w-[45px] h-[45px] social-media-hover-efffext"></i>
+							</li>
+
+							<li class="mx-1 social-li">
+								<i
+									class="fa-brands fa-twitter flex justify-center items-center text-[#858da8] text-[26px] border border-[1px] border-[##858da8] rounded-full w-[45px] h-[45px] social-media-hover-efffext"></i>
+							</li>
+						</ul>
+						<span class="bg-[#aeaeae] w-[60%] h-[1.7px] rounded my-2"></span>
+						<p class="w-[100%] text-[17px] text-[#4f4f4f] my-3">Copyright © 2022 | Whiltor | All rights
+							reserved | Powered by <a class="text-[18px] text-[#0e52c1]" href="#">TDPVista</a></p>
+					</li>
+				</ul>
+			</div>
+			<div class="foot-bg-cover-banner"></div>
+		</div>
+	</footer>
+	<!--footer-->
+
+<script src="/js/script.js"></script>
+</body>
+
+</html>

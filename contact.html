@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+		integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="nav-res.css">
+</head>
+
+<body class="bg-[#ecf2fb]">
+
+	<!--navbar-->
+	<!-- <nav th:replace="portfolio::portfolio-nav"></nav> -->
+	<!--navbar-->
+	<nav class="flex justify-center items-center">
+		<div class="flex justify-between items-center w-[95%] h-[10vh] md:h-[15vh]">
+
+			<!--logo-->
+			<div class=" bg-[] flex justify-center items-center">
+				<img class="w-[100px] md:w-[252px] " src="images/w-logo.png">
+			</div>
+
+			<!--menu-->
+			<div class="flex justify-center items-center relative">
+
+				<ul class="flex md:flex-row justify-center items-center mt-[60px] ml-5 hidden md:block w-[100%]" style="display: flex;">
+					<li class="flex flex-col justify-center items-center mx-1">
+						<div class="h-[250px] mt-[-150px]" style="border-right: 2px dashed #ffdb27;"></div>
+						<a class="text-[17px]" href="index.html">Home</a>
+					</li>
+					<li class="flex flex-col justify-center items-center mx-2">
+						<div class="h-[250px]  mt-[-240px]" style="border-right: 2px dashed #ffdb27;"></div>
+						<a class="text-[17px]" href="portfolio.html">Portfolio</a>
+					</li>
+					<li class="flex flex-col justify-center items-center mx-1">
+						<div class="h-[250px]  mt-[-180px]" style="border-right: 2px dashed #ffdb27;"></div>
+						<a class="text-[17px]" href="services.html">Services</a>
+					</li>
+					<li class="flex flex-col justify-center items-center mx-2">
+						<div class="h-[250px]  mt-[-55px]" style="border-right: 2px dashed #ffdb27;"></div>
+						<a class="text-[17px]" href="cunsultency.html">Cunsultency</a>
+					</li>
+					<li class="flex flex-col justify-center items-center mx-1">
+						<div class="h-[250px]  mt-[-190px]" style="border-right: 2px dashed #ffdb27;"></div>
+						<a class="text-[17px]" href="about.html">About</a>
+					</li>
+					<li class="flex flex-col justify-center items-center mx-2">
+						<a class="flex justify-center items-center text-[16px] bg-[#ffdc2d] rounded-md px-4 py-2 ml-2"
+							href="contact.html" style="box-shadow: inset 4px 4px 10px rgba(255,255,255,250,0.5);">
+							<i class="fa-sharp fa-solid fa-phone text-[16px] mr-2"></i>
+							Contact
+						</a>
+					</li>
+				</ul>
+
+				<input class="hidden" type="checkbox" value="" id="check" />
+				<label class="block md:hidden relative left-[200px]" for="check">
+					<i class="fa-solid fa-bars"></i>
+				</label>
+
+				<ul
+					class="md:hidden block z-20 flex justify-center items-start flex-col bg-[#ecf2fb] relative top-[155px] relative py-1 pr-[100%] left-[-150%]">
+					<li class="flex justify-center items-center mx-2 my-2">
+						<a class="text-[17px]" href="index.html">Home</a>
+					</li>
+					<li class="flex justify-center items-center mx-2 my-2">
+						<a class="text-[17px]" href="portfolio.html">Portfolio</a>
+					</li>
+					<li class="flex justify-center items-center mx-2 my-2">
+						<a class="text-[17px]" href="services.html">Services</a>
+					</li>
+					<li class="flex justify-center items-center mx-2 my-2">
+						<a href="cunsultency.html" class="text-[17px]">Cunsultency</a>
+					</li>
+					<li class="flex justify-center items-center mx-2 my-2">
+						<a class="text-[17px]" href="about.html">About</a>
+					</li>
+					<li class="flex justify-center items-center mx-2mt-1 bg-[#ffdb27] px-3 py-2 rounded-md shadow mx-1">
+						<a class="text-[17px] flex justify-center items-center" href="contact.html">
+							<i class="fa-sharp fa-solid fa-phone text-[16px] mr-2"></i>
+							Contact
+						</a>
+					</li>
+				</ul>
+
+			</div>
+
+		</div>
+	</nav>
+	<!--navbar-->
+
+	<!--section(5)-->
+	<section class="flex justify-center items-center bg-[url('images/contact-bg-01.png')] bg-cover bg-left bg-no-repeat bg-size-contain">
+		<div class="flex justify-end items-center w-[85%] md:w-[90%] min-h-[100vh] pb-5">
+			
+			<div class="flex justify-center items-center rounded-[15px] my-5 w-[100%] md:w-1/2 py-5 relative">
+				<div class="hidden md:block rounded-[20px] py-5 ml-[-620px] absolute">
+					<img class="rounded-[20px] w-[350px]" src="images/img22NoShadowNoBg.png">
+				</div>
+				
+				<form class="bg-[#fff] rounded-lg px-10 ml-[200px] w-[60%] py-5">
+					<h2 class="text-[28px] text-[#4f4f4f] text-center my-5">Contant Us</h2>
+					
+					<div class="flex justify-between items-center w-[50%] my-10">
+						<label class="mr-5" for="fullName">
+							<div class=" flex justify-center items-center rounded-full bg-[#ffce00] p-[2px] w-[35px] h-[35px]">
+								<i class="fas fa-signature text-[20px] text-[#fff]"></i>
+							</div>
+						</label>
+						<input class="text-[16px] formCont ml-5" type="text" id="fullName" placeholder="Full Name">
+					</div>
+
+					<div class="flex justify-between items-center w-[60%] my-10">
+						<label class="mr-5" for="fullName">
+							<div class=" flex justify-center items-center rounded-full bg-[#ffce00] p-[2px] w-[35px] h-[35px]">
+								<i class="far fa-envelope-open text-[20px] text-[#fff]"></i>
+							</div>
+						</label>
+						<input class="text-[16px] formCont ml-5" type="text" id="fullName" placeholder="Full Name">
+					</div>
+
+					<div class="flex justify-between items-center w-[50%] my-10">
+						<label class="mr-5" for="fullName">
+							<div class=" flex justify-center items-center rounded-full bg-[#ffce00] p-[2px] w-[35px] h-[35px]">
+								<i class="fas fa-phone-alt text-[20px] text-[#fff] rotate-[90deg]"></i>
+							</div>
+						</label>
+						<input class="text-[16px] formCont ml-5" type="text" id="fullName" placeholder="Contact Number">
+					</div>
+
+
+					<div class="flex justify-between items-center w-[50%] my-10">
+						<label class="mr-5" for="fullName">
+							<div class=" flex justify-center items-center rounded-full bg-[#ffce00] p-[2px] w-[35px] h-[35px]">
+								<i class="fas fa-paper-plane text-[20px] text-[#fff]"></i>
+							</div>
+						</label>
+						<textarea class="text-[16px] formCont ml-5" type="text" id="fullName"></textarea>
+					</div>
+
+					<div class="flex justify-center justify-self-center items-center  w-[100%] my-10">
+						<button class="bg-[#ffce00] rounded-[30px] w-[200px] h-[40px] text-[#fff] font-bold text-[18px] shadow-[0px_4px_10px_rgba(0,0,0,0.2)] uppercase">Submit</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</section>
+
+
+	<!--footer-->
+	<footer th:fragment="footer-home" class="flex justify-center items-center md:bg-[url('images/SKYLINE_FOOTER_lighter-04.png')] md:bg-cover md:w-[100%] bg-center ">
+		<div class="relatvie flex justify-center items-center min-h-[80vh] w-[90%] md:w-[90%] mb-20">
+			
+			<div class="flex justify-center items-center w-[100%] mb-20">
+				
+				<ul class="flex md:flex-row flex-col justify-center items-start w-[100%] mb-20">
+					
+					<li class="flex flex-col justify-center items-start md:w-1/4 w-full">
+						<h3 class="text-[20px] text-[#1a2942] font-bold mb-10">Get in Touch</h3>
+						<p class="text-[#53538C] text-[17px] my-2 md:w-[70%] w-full mb-4">Don’t miss any updates of our new schemes and services! </p>
+						<form class="" action="" method="post">
+							<input class="rounded md:w-[290px] w-[300px] px-2 py-1 border border-2 border-[#aeaeae] text-[#444] text-[18px] form-controlq" type="text" name="" placeholder="Email" required></input>
+							<br>
+							<button
+								class="uppercase text-[#fff] text-[13px] bg-[#FFCE00] rounded w-[120px] h-[40px] btn btn-brightyellow my-5"
+								type="submit">Subscribe</button>
+						</form>
+					</li>
+
+					<li class="flex flex-col justify-center items-start md:w-1/4 w-full mb-3 md:mb-0">
+						<h3 class="text-[20px] text-[#1a2942] font-bold md:mb-10 mb-3">Download</h3>
+						<a class="text-[#53538C] text-[17px] my-2" href="">Home</a>
+						<a class="text-[#53538C] text-[17px] my-2" href="">About</a>
+					</li>
+
+					<li class="flex flex-col justify-center items-start md:w-1/4 w-full mb-3 md:mb-0">
+						<h3 class="text-[20px] text-[#1a2942] font-bold md:mb-10 mb-3">Services</h3>
+						<a class="text-[#53538C] text-[17px] my-2" href="">Cunsultency</a>
+						<a class="text-[#53538C] text-[17px] my-2" href="">Contact</a>
+						<a class=" text-[#53538C] text-[17px] my-2" href="">All Services</a>
+					</li>
+
+					<li class="flex flex-col justify-center items-start md:w-1/4 w-full mb-3 md:mb-0">
+						<h3 class="text-[20px] text-[#1a2942] font-bold md:mb-10 mb-3">Connect the Network</h3>
+						<ul class="flex justify-center items-center my-3">
+							<li class="mx-1 social-li">
+								<i
+									class="fa-brands fa-linkedin flex justify-center items-center text-[#858da8] text-[26px] border border-[1px] border-[##858da8] rounded-full w-[45px] h-[45px] social-media-hover-efffext"></i>
+							</li>
+
+							<li class="mx-1 social-li">
+								<i
+									class="fa-brands fa-facebook flex justify-center items-center text-[#858da8] text-[26px] border border-[1px] border-[##858da8] rounded-full w-[45px] h-[45px] social-media-hover-efffext"></i>
+							</li>
+
+							<li class="mx-1 social-li">
+								<i
+									class="fa-brands fa-instagram flex justify-center items-center text-[#858da8] text-[26px] border border-[1px] border-[##858da8] rounded-full w-[45px] h-[45px] social-media-hover-efffext"></i>
+							</li>
+
+							<li class="mx-1 social-li">
+								<i
+									class="fa-brands fa-twitter flex justify-center items-center text-[#858da8] text-[26px] border border-[1px] border-[##858da8] rounded-full w-[45px] h-[45px] social-media-hover-efffext"></i>
+							</li>
+						</ul>
+						<span class="bg-[#aeaeae] w-[60%] h-[1.7px] rounded my-2"></span>
+						<p class="w-[100%] text-[17px] text-[#4f4f4f] my-3">Copyright © 2022 | Whiltor | All rights
+							reserved | Powered by <a class="text-[18px] text-[#0e52c1]" href="#">TDPVista</a></p>
+					</li>
+				</ul>
+			</div>
+			<div class="foot-bg-cover-banner"></div>
+		</div>
+	</footer>
+	<!--footer-->
+	<!--Footer Section-->
+	<!-- <footer th:replace="home::footer-home"></footer> -->
+</body>
+
+</html>

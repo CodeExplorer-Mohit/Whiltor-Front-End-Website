@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+		integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="nav-res.css">
+
+	<style>
+		ul {
+			transition-property: all;
+			transition-duration: .5s;
+			transition-timing-function: ease-in-out;
+			left: -100%;
+		}
+
+		#check:checked~ul {
+			left: -61%;
+		}
+
+		#check:checked .menu-bar-img-margin {
+			margin-top: 100px;
+		}
+	</style>
+
+</head>
+
+<body class="bg-[#ecf2fb]">
+
+	<!--navbar-->
+	<nav th:fragment="portfolio-nav" class="flex justify-center items-center">
+		<div class="flex justify-between items-center w-[98%] max-h-[10vh] relative pt-3">
+			<div class="flex justify-center items-center">
+				<img class="w-[102px] md:w-[102px]" src="images/w-logo.png">
+			</div>
+
+			<input class="hidden" type="checkbox" value="" id="check" />
+			<label class="block md:hidden relative left-[170px]" for="check">
+				<i class="fa-solid fa-bars text-[24px] mr-5"></i>
+			</label>
+
+			<ul
+				class="z-20 flex justify-center items-start md:items-center flex-col bg-[#ecf2fb] md:flex-row relative top-[145px] left-[] md:left-[0%] md:top-[0px] md:ml-auto">
+				<li class="flex justify-center items-center mx-2 my-2">
+					<a class="text-[17px]" href="index.html">Home</a>
+				</li>
+				<li class="flex justify-center items-center mx-2 my-2">
+					<a class="text-[17px]" href="portfolio.html">Portfolio</a>
+				</li>
+				<li class="flex justify-center items-center mx-2 my-2">
+					<a class="text-[17px]" href="services.html">Services</a>
+				</li>
+				<li class="flex justify-center items-center mx-2 my-2">
+					<a class="text-[17px]" href="cunsultency.html">Cunsultency</a>
+				</li>
+				<li class="flex justify-center items-center mx-2 my-2">
+					<a class="text-[17px]" href="about.html">About</a>
+				</li>
+				<li class="flex justify-center items-center mx-2mt-1 bg-[#ffdb27] px-3 py-2 rounded-md shadow mx-1">
+					<a class="text-[17px] flex justify-center items-center" href="contact.html">
+						<i class="fa-sharp fa-solid fa-phone text-[16px] mr-2"></i>
+						Contact
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+		
+		
+		
+	
+	
+			<!--section()-->
+	<section class="flex justify-center items-center">
+		<div class="flex justify-center items-center w-[85%] md:w-[90%] min-h-[80vh]">
+			<!--left-->
+			<div class="flex flex-col justify-center items-start md:mr-10 w-1/2">
+				<h2 class="text-[40px] leading-[50px] w-[90%] text-left tracking-wide text-[#4b505e] font-bold my-2">
+					Trust and Excellence in Every Way
+				</h2>
+				<h3 class="text-[#4f4f4f] text-[17px] mb-10">
+					Bridge the gap between your vision and its reality with the best-in-industry services provided by Whiltor.
+				</h3>
+				
+				<ul class="flex justify-center items-center my-10 w-[]">
+					<li class="flex flex-col justify-center items-center bg-[#fff] rounded-md w-[130px] h-[200px] p-3 mx-10 shadow-xl shadow-inner" style="border-bottom: 4px solid #FFDC2D;">
+						<img class="w-[50px]" src="images/cog.png">
+						<span class="bg-[#aeaeae] w-[90%] h-[1.7px] rounded my-2"></span>
+						<p class="text-[#4f4f4f] text-[13px] text-center">We offer consulting services that are unmatched in the market. </p>
+					</li>
+					
+					<li class="flex flex-col justify-center items-center bg-[#fff] rounded-md w-[130px] h-[200px] p-3 mx-10 shadow-xl" style="border-bottom: 4px solid #f93154;">
+						<img class="w-[50px]" src="images/mail.png">
+						<span class="bg-[#aeaeae] w-[90%] h-[1.7px] rounded my-2"></span>
+						<p class="text-[#4f4f4f] text-[13px] text-center">We assist you in establishing a strong market presence.</p>
+					</li>
+					
+					<li class="flex flex-col justify-center items-center bg-[#fff] rounded-md w-[130px] h-[200px] px-3 mx-10 shadow-xl" style="border-bottom: 4px solid #52cccc;">
+						<img class="w-[50px]" src="images/line-chart.png">
+						<span class="bg-[#aeaeae] w-[90%] h-[1.7px] rounded my-2"></span>
+						<p class="text-[#4f4f4f] text-[13px] text-center">We ensure your long-term success and overall development.</p>
+					</li>
+				</ul>
+			</div>
+		<!--right-->
+			<div class="flex md:flex-row justify-center items-center mt-10 md:ml-10 relative">
+				<img class="md:w-[450px] z-[501]" src="images/whiltor-02.png">
+				<img class="md:w-[450px] absolute" src="images/whiltor-01.png">
+				<img class="md:w-[450px] absolute" src="images/whiltor-03.png">
+				<img class="md:w-[450px] absolute" src="images/whiltor-04.png">
+				<img class="md:w-[450px] absolute" src="images/whiltor-05.png">
+				<img class="md:w-[450px] absolute z-[502]" src="images/whiltor-06.png">
+				<img class="md:w-[450px] absolute" src="images/whiltor-08.png">
+			</div>
+		</div>
+	</section>	
+	
+		
+		
+		<!--section()-->
+	<section class="flex justify-center items-center bg-[]">
+		<div class="flex flex-col justify-center items-center my-10  w-[85%] md:w-[80%] min-h-[70vh]">
+			<!--Heading-->
+			<div class="flex flex-col justify-center items-center">
+				<h2 class="text-[28px] tracking-wide text-[#222] uppercase font-bold text-center my-2 md:my-2">Whiltor helps you deliver Superior Customer Experience</h2>
+			</div>
+		<!--bottom-->
+			<div class="flex flex-col md:flex-row justify-center items-center mt-10">
+				<img class="md:w-[170px] md:mr-20" src="images/img13NoShadowNoBg.png">
+				<h3 class="text-[#aeaeae] text-[17px] my-2 md:my-2 md:w-[60%] md:ml-20">
+					An immersive and seamless experience for clients is no more a pipe dream, but a reality. With our strategically created plans, we at Whiltor provide you with a competitive strategy that is future-proof and helps your business accomplish the desired results. Our outcome-focused approach allows us to gain valuable insight into customer behaviors.Which enhances and simplifies customer experience and acclerates your business growth from strategy to execution.
+				</h3>
+			</div>
+		</div>
+	</section>		
+		
+	
+		<!--section()-->
+	<section class="flex justify-center items-center bg-[]">
+		<div class="flex flex-col justify-center items-center my-10 background-cover-img">
+			
+		</div>
+	</section>
+	
+	
+	
+	<!--section()-->
+	<section class="flex justify-center items-center">
+		<div class="flex flex-col justify-center items-center my-10  w-[85%] md:w-[86%] min-h-[100vh]">
+			<!--Heading-->
+			<div class="flex flex-col justify-center items-center mt-10">
+				<h2 class="text-[32px] font-bold text-center my-2 md:my-2">LET'S MAKE A DIFFERENCE TOGETHER.</h2>
+				<h3 class="text-[#4f4f4f] text-center my-2 md:my-2">We at Whiltor help you turn your idea into a product.</h3>
+			</div>
+		<!--bottom-->
+			<div class="flex flex-col md:flex-row justify-center items-center my-20 py-5">
+				<div class="relative flex flex-col justify-center items-center w-[100%] md:w-1/3 md:mx-10 mt-20 md:mt-20 mb-20 md:mb-20 h-[250px] rounded-[10px] p-3 border-[1px] border-[#fff] bg-[#fff] portfolio-four-card-scale-effect" style="box-shadow: 0px 10px 50px rgba(0, 0, 0, .1), inset 0px 0px 10px rgba(0, 0, 0, .1);">
+					<img class="w-[200px] mt-[-300px] absolute" src="images/business-3d-well-done.png">
+					<h3 class="text-[26px] text-center text-[#4b505e] mt-10">Staergize</h3>
+					<p class="text-[17px] text-center text-[#555] w-[85%] my-3">Our strategic insights, and innovative ideas for your future objectives will assist you in taking your brand to new heights.</p>
+				</div>
+				
+				<div class="relative flex flex-col justify-center items-center w-[100%] md:w-1/3 md:mx-10 top-[50px] mt-20 md:mt-20 mb-20 md:mb-20 h-[250px] rounded-[10px] p-3 border-[1px] border-[#fff] bg-[#fff] portfolio-four-card-scale-effect" style="box-shadow: 0px 10px 50px rgba(0, 0, 0, .1), inset 0px 0px 10px rgba(0, 0, 0, .1);">
+					<img class="w-[200px] mt-[-300px] absolute" src="images/business-3d-283.png">
+					<h3 class="text-[26px] text-center text-[#4b505e] mt-10">Innovate</h3>
+					<p class="text-[17px] text-center text-[#555] w-[85%] my-3">Bridge the gap between technology and your business by implementing era-appropriate innovations to boost your brand's value.</p>
+				</div>
+				
+				<div class="relative flex flex-col justify-center items-center w-[100%] md:w-1/3 md:mx-10 mt-20 md:mt-20 mb-20 md:mb-20 h-[250px] rounded-[10px] p-3 border-[1px] border-[#fff] bg-[#fff] portfolio-four-card-scale-effect" style="box-shadow: 0px 10px 50px rgba(0, 0, 0, .1), inset 0px 0px 10px rgba(0, 0, 0, .1);">
+					<img class="w-[200px] mt-[-300px] absolute" src="images/business-3d-with-phone-girl-1.png">
+					<h3 class="text-[26px] text-center text-[#4b505e] mt-10">Transfrom</h3>
+					<p class="text-[17px] text-center text-[#555] w-[85%] my-3">Transform your ideas to reality with Whiltor. When it comes to your dream, don't leave anything out connect with us.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	
+	
+		<!--arraow-banner-->
+	<img class="w-100% mt-5" src="images/sec-3-cut1.png" style="vertical-align: middle;">
+
+	<!--section()-->
+	<section class="flex justify-center items-center bg-[#1A2942]">
+		<div class="flex justify-between items-center w-[85%] md:w-[80%] min-h-[50vh] py-6">
+			<div class="flex flex-col justify-center items-center  my-10">
+				<h2 class="text-[#fff] text-[24px] md:text-[32px] font-bold text-center my-3">
+					Why Us ?
+				</h2>
+				<div class="flex justify-between items-center bg-[#fff] rounded-md px-5 py-5 md:w-[100%] shadow-md my-3 md:w-[600px]">
+					<p class="font-bold">
+						<h3 class="text-[#F7316E] font-bold text-[20px]">01</h3>
+						<h3 class="font-bold">Available everytime and in every situation</h3>
+					</p>
+					<i class="fa-solid fa-angle-down "></i>
+				</div>
+				
+				<div class="flex justify-between items-center bg-[#fff] rounded-md px-5 py-5 md:w-[100%] shadow-md my-3 md:w-[600px]">
+					<p class="font-bold">
+						<h3 class="text-[#F7316E] font-bold text-[20px] mx-1">01</h3>
+						<h3 class="font-bold mx-1">Available everytime and in every situation</h3>
+					</p>
+					<i class="fa-solid fa-angle-down "></i>
+				</div>
+				
+				<div class="flex justify-between items-center bg-[#fff] rounded-md px-5 py-5 md:w-[100%] shadow-md my-3 md:w-[600px]">
+					<p class="font-bold">
+						<h3 class="text-[#F7316E] font-bold text-[20px] mx-1">01</h3>
+						<h3 class="font-bold mx-1">Available everytime and in every situation</h3>
+					</p>
+					<i class="fa-solid fa-angle-down "></i>
+				</div>
+				
+			</div>
+			<div class="flex justify-center items-center mt-5">
+				<div class="flex justify-center items-center">
+					<img class="rounded-[100px] w-[350px] s9-float-img static" src="images/portfolio-right-img.jpg" alt="img">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--arraow-banner-->
+	<img class="mb-5" src="images/sec-3-cut2.png" width="100%" style="vertical-align: middle;">
+	
+	
+	
+	<!--section()-->
+	<section class="flex justify-center items-center mt-5 md:mt-0">
+		<div class="flex flex-col justify-center items-center min-h-[50vh] max-w-[80%] md:w-[90%] bg-[]">
+			<!--top-->
+			<div class="flex flex-col justify-center items-center my-5">
+				<h2 class="text-[32px] font-bold uppercase my-2">Creative thinking , effective solutions</h2>
+				<h3 class="text-[#4f4f4f] text-center my-2">Connect with Whiltor and experience unique solutions for every unique business.</h3>
+			</div>
+			
+			<!--top-->
+			<div class="flex justify-center items-center my-5">
+				
+				<div class="flex flex-col justify-center items-center">
+					<div class="bg-[#fff] p-[1.8rem] rounded-full my-4">
+						<img class="w-[50px] bg-[#fff]" src="images/web-design.png">
+					</div>
+					<h3 class="text-[22px] text-[#4b505e] mt-5 mb-1">Morden Graphics</h3>
+					<p class="text-[#4b505e] my-1 md:w-[90%]">We also offer visually appealing videos to help you define your brand or expand your current business. </p>
+				</div>
+				
+				<div class="flex flex-col justify-center items-center">
+					<div class="bg-[#fff] p-[1.8rem] rounded-full my-4">
+						<img class="w-[50px] bg-[#fff]" src="images/analysis.png">
+					</div>
+					<h3 class="text-[22px] text-[#4b505e] mt-5 mb-1">Morden Graphics</h3>
+					<p class="text-[#4b505e] my-1 md:w-[90%]">We also offer visually appealing videos to help you define your brand or expand your current business. </p>
+				</div>
+				
+				<div class="flex flex-col justify-center items-center">
+					<div class="bg-[#fff] p-[1.8rem] rounded-full my-4">
+						<img class="w-[50px] bg-[#fff]" src="images/fist.png">
+					</div>
+					<h3 class="text-[22px] text-[#4b505e] mt-5 mb-1">Morden Graphics</h3>
+					<p class="text-[#4b505e] my-1 md:w-[90%]">We also offer visually appealing videos to help you define your brand or expand your current business. </p>
+				</div>
+			</div>
+			
+			<img class="w-[1000px] my-10" src="images/protfolio-arrow.png">	
+		</div>
+	</section>	
+	
+	
+		<!--section()-->
+	<section class="flex justify-center items-center mt-5 md:mt-0">
+		<div class="flex flex-col justify-center items-center min-h-[50vh] max-w-[90%] md:w-[90%] bg-[]">
+			<!--top-->
+			<div class="flex flex-col md:flex-row justify-center items-center my-5">
+				<div class="flex flex-col justify-center md:items-start items-center w-[100%] md:w-1/2">
+					<h2 class="text-[#4b505e] text-[24px] my-5">About Us</h2>
+					<p class="text-[17px] text-[#4f4f4f] my-5">Whiltor is known for its consulting services globally. Whiltor understands the mindset of young entrepreneurs and their business models, and we offer them with the data they need to make informed marketing decisions and build a brand image through modern websites, design, and other means.Connect with Whiltor and drive your journey to peek. </p>
+					<button class="uppercase my-5 md:my-1 border-2 border-[#444] rounded-md px-4 text-[12px] py-2">
+						contact us
+					</button>
+				</div>
+				<div class="flex justify-center items-center">
+					<img class="w-[320px] md:w-[320px]" src="images/img6NoShadowNoBg.png">
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	<!--section()-->
+	<section class="flex justify-center items-center mt-5 md:mt-0">
+		<div class="flex flex-col justify-center items-center min-h-[100vh] max-w-[90%] md:w-[90%] bg-[]">
+			<!--top-->
+			<div class="flex flex-col justify-center items-center my-5">
+				<h2 class="text-[22px] md:text-[32px] my-2 font-bold uppercase">Our Services</h2>
+				<h3 class="text-center text-[17px] text-[#444] my-2">Whiltor offers a wide range of services to assist you in establishing your brand in the market </h3>
+			</div>
+			<!--bottom-->
+			<div class="flex flex-col md:flex-row justify-center items-center">
+				<!--1st-->
+				<div class="flex justify-center items-center h-[100%] w-[100%] md:w-[80%] mt-5 md:mt-0 mr-0 md:mr-[-15px]">
+					<div class="flex flex-col justify-center items-center p-5 shadow-xl rounded-md w-[85%] portfolio-four-card-scale-effect" style="border-top: 5px solid #52CCCC;">
+						<h2 class="text-[32px] text-[#555] self-start">Branding</h2>
+						<p class="text-[#4f4f4f]">We work with to develop a unique brand identity through effective brand strategy and brand marketing. </p>
+						<img class="w-[70px] self-end" src="https://raw.githubusercontent.com/hammercait/Four-card-feature-section/5ea08dcf28f3c32721a653da27be2d525f165890/images/icon-supervisor.svg">
+					</div>
+				</div>
+				
+				<!--2nd-->
+				<div class="flex flex-col justify-center items-center h-[100%] w-[100%] md:w-[80%] mr-0 md:mx-[-15px]">
+					<div class="flex flex-col justify-center items-center my-5 p-5 border-top-[2px] border-[#f0f] shadow-xl rounded-md w-[85%] portfolio-four-card-scale-effect" style="border-top: 5px solid #F7316E;">
+						<h2 class="text-[32px] text-[#555] self-start">Branding</h2>
+						<p class="text-[#4f4f4f]">We work with to develop a unique brand identity through effective brand strategy and brand marketing. </p>
+						<img class="w-[70px] self-end" src="https://raw.githubusercontent.com/hammercait/Four-card-feature-section/5ea08dcf28f3c32721a653da27be2d525f165890/images/icon-team-builder.svg">
+					</div>
+					
+					<div class="flex flex-col justify-center items-center p-5 border-top-[2px] border-[#f0f] shadow-xl rounded-md w-[85%] portfolio-four-card-scale-effect" style="border-top: 5px solid #FFCE00;">
+						<h2 class="text-[32px] text-[#555] self-start">Branding</h2>
+						<p class="text-[#4f4f4f]">We work with to develop a unique brand identity through effective brand strategy and brand marketing. </p>
+						<img class="w-[70px] self-end" src="https://raw.githubusercontent.com/hammercait/Four-card-feature-section/5ea08dcf28f3c32721a653da27be2d525f165890/images/icon-karma.svg">
+					</div>
+				</div>
+				
+				<!--3rd-->
+				<div class="flex justify-center items-center h-[100%] w-[100%] md:w-[80%] my-5 md:my-0 mr-0 md:ml-[-15px]">
+					<div class="flex flex-col justify-center items-center p-5 border-top-[2px] border-[#f0f] shadow-xl rounded-md w-[85%] portfolio-four-card-scale-effect" style="border-top: 5px solid #53538C;">
+						<h2 class="text-[32px] text-[#555] self-start">Branding</h2>
+						<p class="text-[#4f4f4f]">We work with to develop a unique brand identity through effective brand strategy and brand marketing. </p>
+						<img class="w-[70px] self-end" src="https://raw.githubusercontent.com/hammercait/Four-card-feature-section/5ea08dcf28f3c32721a653da27be2d525f165890/images/icon-calculator.svg">
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+
+
+	<!--section()-->
+	<section class="flex justify-center items-center">
+		<div class="flex flex-col justify-center items-center min-h-[90vh] max-w-[90%] md:w-[90%] bg-[]">
+			<!--top-->
+			<div class="flex flex-col justify-center items-center my-5">
+				<h2 class="text-center text-[24px] md:text-[34px] my-4">Whiltor Offers 24/ 7 Support</h2>
+				<h3 class="text-center text-[17px] text-[#444] my-3">Whiltor is here to assist you at every step of the way.</h3>
+			</div>
+			<!--bottom-->
+			<div class="flex flex-col md:flex-row justify-center items-center">
+				<div class="flex justify-center items-center my-5 md:my-10 px-5 md:px-10">
+					<img class="w-[240px] md:w-[404px]" src="images/portfolio.png">
+				</div>
+			
+				<div class="flex flex-col justify-center items-center">
+					<div class="flex justify-between items-center w-[320px] md:w-[580px] bg-[#fff] my-3 py-4 px-2 rounded-md shadow-md-effect">
+						<i class="fa-solid fa-robot text-[38px] text-[#555] mr-2"></i>
+						<p class="text-center text-[#555] text-[17px] ml-2">We at Whiltor answer all your queries with Intelligence powered bot.</p>
+					</div>
+					<div class="flex justify-between items-center  w-[320px] md:w-[580px] bg-[#fff] my-3 py-4 px-2 rounded-md shadow-md-effect">
+						<i class="fa-solid fa-users text-[38px] text-[#555] mr-2"></i>
+						<p class="text-center text-[#555] text-[17px] ml-2">Our team offers free consultation to help you find the best solution.</p>
+					</div>
+					<div class="flex justify-between items-center  w-[320px] md:w-[580px] bg-[#fff] my-3 py-4 px-2 rounded-md shadow-md-effect">
+						<i class="fa-solid fa-business-time text-[38px] text-[#555] mr-2"></i>
+						<p class="text-center text-[#555] text-[17px] ml-2">Whiltor works with consumers one-on-one to give best assistance.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+
+	<!--footer-->
+	<footer th:fragment="footer-home" class="flex justify-center items-center md:bg-[url('images/SKYLINE_FOOTER_lighter-04.png')] md:bg-cover md:w-[100%] bg-center ">
+		<div class="relatvie flex justify-center items-center min-h-[80vh] w-[90%] md:w-[90%] mb-20">
+			
+			<div class="flex justify-center items-center w-[100%] mb-20">
+				
+				<ul class="flex md:flex-row flex-col justify-center items-start w-[100%] mb-20">
+					
+					<li class="flex flex-col justify-center items-start md:w-1/4 w-full">
+						<h3 class="text-[20px] text-[#1a2942] font-bold mb-10">Get in Touch</h3>
+						<p class="text-[#53538C] text-[17px] my-2 md:w-[70%] w-full mb-4">Don’t miss any updates of our new schemes and services! </p>
+						<form class="" action="" method="post">
+							<input class="rounded md:w-[290px] w-[300px] px-2 py-1 border border-2 border-[#aeaeae] text-[#444] text-[18px] form-controlq" type="text" name="" placeholder="Email" required></input>
+							<br>
+							<button
+								class="uppercase text-[#fff] text-[13px] bg-[#FFCE00] rounded w-[120px] h-[40px] btn btn-brightyellow my-5"
+								type="submit">Subscribe</button>
+						</form>
+					</li>
+
+					<li class="flex flex-col justify-center items-start md:w-1/4 w-full mb-3 md:mb-0">
+						<h3 class="text-[20px] text-[#1a2942] font-bold md:mb-10 mb-3">Download</h3>
+						<a class="text-[#53538C] text-[17px] my-2" href="">Home</a>
+						<a class="text-[#53538C] text-[17px] my-2" href="">About</a>
+					</li>
+
+					<li class="flex flex-col justify-center items-start md:w-1/4 w-full mb-3 md:mb-0">
+						<h3 class="text-[20px] text-[#1a2942] font-bold md:mb-10 mb-3">Services</h3>
+						<a class="text-[#53538C] text-[17px] my-2" href="">Cunsultency</a>
+						<a class="text-[#53538C] text-[17px] my-2" href="">Contact</a>
+						<a class=" text-[#53538C] text-[17px] my-2" href="">All Services</a>
+					</li>
+
+					<li class="flex flex-col justify-center items-start md:w-1/4 w-full mb-3 md:mb-0">
+						<h3 class="text-[20px] text-[#1a2942] font-bold md:mb-10 mb-3">Connect the Network</h3>
+						<ul class="flex justify-center items-center my-3">
+							<li class="mx-1 social-li">
+								<i
+									class="fa-brands fa-linkedin flex justify-center items-center text-[#858da8] text-[26px] border border-[1px] border-[##858da8] rounded-full w-[45px] h-[45px] social-media-hover-efffext"></i>
+							</li>
+
+							<li class="mx-1 social-li">
+								<i
+									class="fa-brands fa-facebook flex justify-center items-center text-[#858da8] text-[26px] border border-[1px] border-[##858da8] rounded-full w-[45px] h-[45px] social-media-hover-efffext"></i>
+							</li>
+
+							<li class="mx-1 social-li">
+								<i
+									class="fa-brands fa-instagram flex justify-center items-center text-[#858da8] text-[26px] border border-[1px] border-[##858da8] rounded-full w-[45px] h-[45px] social-media-hover-efffext"></i>
+							</li>
+
+							<li class="mx-1 social-li">
+								<i
+									class="fa-brands fa-twitter flex justify-center items-center text-[#858da8] text-[26px] border border-[1px] border-[##858da8] rounded-full w-[45px] h-[45px] social-media-hover-efffext"></i>
+							</li>
+						</ul>
+						<span class="bg-[#aeaeae] w-[60%] h-[1.7px] rounded my-2"></span>
+						<p class="w-[100%] text-[17px] text-[#4f4f4f] my-3">Copyright © 2022 | Whiltor | All rights
+							reserved | Powered by <a class="text-[18px] text-[#0e52c1]" href="#">TDPVista</a></p>
+					</li>
+				</ul>
+			</div>
+			<div class="foot-bg-cover-banner"></div>
+		</div>
+	</footer>
+	<!--footer-->
+	<!--footer-->
+	<!-- <footer th:replace="home::footer-home">
+		
+	</footer> -->
+
+</body>
+
+</html>
